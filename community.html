@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location-Based Community Page</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/frentals/css/community.css">
+
+</head>
+<body>
+  <header>
+    <nav class="w3-bar w3-blue w3-round-xlarge" >
+      <a href="main.html" class="w3-bar-item w3-button w3-round-large ">
+        <i class="fa fa-arrow-left"></i></a>
+      <a href="community.html" class="w3-round-xlarge w3-bar-item w3-button">Home</a>
+      <a href="#explore" class="w3-bar-item w3-button w3-round-xlarge">Explore</a>
+      <a href="#notifications" class="w3-bar-item w3-button w3-round-xlarge">Notifications</a>
+      <a href="#profile" class="w3-bar-item w3-button w3-round-xlarge" >Profile</a>
+
+      <a href="index.html" style="margin-left: 50%;" class=" w3-button w3-round-large ">Logout</a>
+      
+    </nav>
+  </header>
+
+  <div id="locContainer" class="w3-row-padding w3-round-large">Location<i class="fa fa-refresh"></i>
+  </div>
+
+  <section id="home" class="w3-container w3-center w3-padding-large w3-margin">
+    <h1>Welcome to the Community Page</h1>
+    <p>Discover and connect with people in your local area.</p>
+  </section>
+  
+  <section id="explore" class="w3-container">
+    <h2 class="w3-center">Explore</h2>
+
+
+
+      <!-- Add more posts here -->
+      <div  class="w3-container w3-content w3-padding" style="max-width:1500px">
+        
+      <div id="posts" class="w3-row-padding w3-container  ">
+        <button class="w3-button w3-block w3-dark-grey w3-round-xlarge">+ Connect</button>
+
+         </div>
+      </div>
+      
+    
+  
+    <!-- post form -->
+  <section>
+    <div id="postForm" class="w3-container">
+        <h2>Create a New Post</h2>
+        <form class="w3-container w3-bar w3-show-inline-block w3-content w3-padding" 
+        style="max-width:1400px;"  
+        id="postForm" action="/frentals/forms/submit_post.php" enctype="multipart/form-data" method="POST">
+            <!-- Form fields -->
+            <input type="hidden" id="postLocation" name="location" value="city">
+            <input type="text" hidden name="hidden" id="hidden">
+            <label for="image" class="file-icon">
+              <i id="upload" style="font-size:14px;color: grey;margin-right: 7%;margin-bottom: 2.5vw; border-color: white;"
+               class="fa fa-camera w3-button w3-padding-large w3-container w3-round-xlarge"></i>
+            </label>
+            <input type="file" id="image" class="w3-padding-small w3-container  w3-round-xlarge w3-button"
+             name="image" placeholder="Post Image">
+            
+            <input style="max-width:700px; " class="w3-input w3-padding-large w3-border w3-round-large w3-center" type="text" id="postContent" name="content" placeholder="Post Content">
+            
+            <!-- Submit button -->
+            <button name="submit" id="submit" class="w3-padding-large w3-container w3-round-xlarge w3-button"
+             type="submit"><i class="fa fa-send-o" style=" font-size:14px;color: grey; border-color: white;"></i>
+            </button>
+          
+          </form>
+
+        
+      </div>
+      
+</section>  
+  <section id="notifications" class="w3-container">
+    <h2 class="w3-center">Notifications</h2>
+    <div class="w3-panel w3-pale-yellow w3-padding">
+      <p>No new notifications.</p>
+    </div>
+  </section>
+  
+  <section id="profile" class="w3-container">
+    <h2 class="w3-center">Profile</h2>
+    <div class="w3-card">
+      <div class="w3-container">
+        <h3>User Name</h3>
+        <p>User Bio</p>
+        <p>Location: Neighborhood A</p>
+        <p>Followers: 1000</p>
+        <p>Following: 500</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="w3-container w3-padding-64 w3-center w3-dark-grey">
+    <p>&copy; 2023 Location-Based Community Page. All rights reserved.</p>
+  </footer>
+
+  <script type="text/javascript" src="/frentals/js/community.js"></script>
+  <!-- Include jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</body>
+</html>
